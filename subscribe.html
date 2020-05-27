@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Zara&copy; Official - Signup</title>
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/jquery-3.5.0.min.js"></script>
+    <script src="js/form.js"></script>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <div class="header">
+        <div class="navbar">
+            <div class="container">
+                <!-- <h2>Z<span>a</span>ra</h2>-->
+                <a href="index.html"><img src="images/logo3.png"></a>
+                <ul>
+                    <li><a class="active" href="index.html">Home</a></li>
+                    <li><a class="active" href="men.html">Men</a></li>
+                    <li><a class="active" href="women.html">Women</a></li>
+                    <li><a class="active" href="kids.html">Kids</a></li>
+                    <li><a class="active" href="stores.html">Stores</a></li>
+                    <li><a class="active" href="subscribe.html">Subscribe</a></li>
+                    <li><a class="active" href="contact.html">Contact us</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- EO Header -->
+
+<form action="action_page.php" onsubmit="return valid()">
+  <div class="container_form">
+    <h1>Sign Up</h1>
+    <p>Please fill in this form to create an account.</p>
+    <hr>
+    <label for="fname">First Name</label>
+    <input type="text" id="fname" name="firstname" placeholder="Your name.." required>
+
+    <label for="lname">Last Name</label>
+    <input type="text" id="lname" name="lastname" placeholder="Your last name.." required>
+
+    <label for="email">Email</label>
+    <input type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder="enter email address example@example.com" name="email" required>
+
+    <label for="mobile">Mobile</label>
+    <input type="text" id="mobile" pattern="^\d{11}$" name="mobilenum" placeholder="Your mobile number of 11.." required>
+          
+    <label for="address">Address</label>
+    <input type="text" id="address" name="address" placeholder="Your address.." required>
+      
+    <label for="gender">Gender : </label>
+    <label><input type="radio" unchecked name="gender" value="male" style="margin-bottom:15px" required> Male</label>
+    <label><input type="radio" unchecked name="gender" value="female" style="margin-bottom:15px" required> Female</label><br>
+      
+    <label for="psw">Password</label><br>
+    <input class="pass1" type="password" placeholder="Enter the Password" pattern="(?=^.{8}$)((?=.*\d)(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" id="pass1" title="Must start with uppercase, only 8 characters, contains at least one digit,one lowercase letter and a special char." required>
+    <label for="psw">Repeat Password</label><br>
+    <input type="password"  id="pass2" placeholder="Repeat The Password" required>
+
+    <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+
+    <div class="clearfix">
+      <button type="button" class="cancelbtn">Cancel</button>
+      <button type="submit" class="signupbtn">Signup</button>
+    </div>
+  </div>
+</form>
+
+    <!-- Footer -->
+    <div class="footer">
+        <div class="container">
+            <div class="text">
+                <span>zara&copy; all copyrights reserved</span>
+            </div>
+            <div class="social">
+                <ul>
+                    <li>
+                        <a href="https://www.facebook.com" target="_blank"><img src="images/social/facebook.png"></a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com" target="_blank"><img src="images/social/instagram.png"></a>
+                    </li>
+                    <li>
+                        <a href="https://www.twitter.com" target="_blank"><img src="images/social/twitter.png"></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+        
+    <!-- EO Footer -->
+    <script type="text/javascript">
+                        function valid(){
+                            var password = document.getElementById("pass1").value;
+                            var confirmPassword = document.getElementById("pass2").value;
+                            var make_pass_string = password.toString;
+                            var pass_length = password.length;   
+                            var i=0;
+                            
+                            if (password != confirmPassword) {
+                                alert("Passwords do not match.");
+                                return false;
+                            }else{                             
+                                if(password[0] != password[0].toUpperCase()){
+                                    alert('Make sure it password starts with capital letter');
+                                    return false;
+                                }
+                            }
+                        }
+                    </script>
+    </body>
+
+</html>

@@ -1,0 +1,438 @@
+    .container {
+        margin: auto;
+        overflow: hidden;
+        padding:0 20px 0 20px
+    }
+    
+    hr {
+      border: 1px solid #252f31;
+      margin-bottom: 25px;
+        width:50%;
+    }
+    /* Body */
+    
+    body {
+        font-family: sans-serif;
+        height: 100%;
+        margin: 0;
+    }
+    /* EO Body */
+    /* Header */
+    
+    .header .navbar {
+        overflow: hidden;
+        padding-top: 0;
+        padding-left: 50px;
+        padding-right: 50px;
+        background-color: #252f31;
+        color: #fff
+    }
+    
+    .header .navbar img {
+        float: left;
+        text-align:center;
+        width: 120px;
+        padding-top: 6px;
+    }
+    
+    
+    .header .navbar ul {
+        list-style: none;
+        float: right;
+        padding: 0;
+        text-align: center
+    }
+    
+    .header .navbar ul li {
+        float: left;
+        padding: 10px
+    }
+    
+    .header .navbar ul li a {
+        color: #fff;
+        text-decoration: none
+    }
+    
+    .header .navbar ul li a:active {
+        color: #888;
+    }
+    
+    .header .navbar ul li a:hover {
+        color: #888;
+    }
+    
+    .header .slidermen {
+        background-image: url(../images/men.jpg);
+        background-size: cover;
+        height: 600px;
+    }
+    
+    .header .slidermen .intro {
+        padding-top: 200px;
+        text-align: center;
+        color: #252f31
+    }
+    
+    .header .slidermen .intro h2 {
+        font-size: 50px;
+        text-transform: capitalize;
+        margin: 0 auto;
+        width: 500px
+    }
+    
+    .header .slidermen .intro h2 span {
+        text-transform: uppercase;
+    }
+    /* women*/
+    
+    .header .sliderwomen {
+        background-image: url(../images/women.jpg);
+        background-size: cover;
+        height: 600px;
+    }
+    
+    .header .sliderwomen .intro {
+        padding-top: 200px;
+        text-align: center;
+        color: #252f31
+    }
+    
+    .header .sliderwomen .intro h2 {
+        font-size: 50px;
+        text-transform: capitalize;
+        margin: 0 auto;
+        width: 500px
+    }
+    
+    .header .sliderwomen .intro h2 span {
+        text-transform: uppercase
+    }
+    /* kiddddddddddds slider */
+    
+    .header .sliderkids {
+        background-image: url(../images/kids1.jpg);
+        background-size: cover;
+        height: 600px;
+    }
+    
+    .header .sliderkids .intro {
+        padding-top: 200px;
+        text-align: center;
+        color: #252f31
+    }
+    
+    .header .sliderkids .intro h2 {
+        font-size: 50px;
+        text-transform: capitalize;
+        margin: 0 auto;
+        width: 500px
+    }
+    
+    .header .sliderkids .intro h2 span {
+        text-transform: uppercase
+    }
+    /* EO Header */
+    /* classes */
+    
+    .classes {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        overflow: hidden;
+    }
+    
+    .classes .class {
+        float: left;
+        width: 33.3%;
+        height: 900px;
+        text-align: center;
+        color: #252f31;
+    }
+    
+    .classes .class img {
+        margin: 0 50px 50px 50px;
+        
+    }
+    
+    .classes .class h2 {
+        text-transform: uppercase
+    }
+    
+    .classes .class a {
+        color: #252f31;
+        text-decoration: none;
+    }
+    
+    .classes .class a:hover {
+        color: #888;
+        text-decoration: none;
+    }
+    
+    .classes .class p {
+        text-transform: capitalize;
+        margin: 10px
+    }
+    /* EO classes */
+    /* about */
+    
+    .about {
+        overflow: hidden;
+    }
+    
+    .about .container .head {
+        text-align: center;
+        text-transform: uppercase;
+        color: #252f31;
+        float: left;
+        padding-left: 50px;
+    }
+    
+    .about .container .info p {
+        float: right;
+        text-align: center;
+        font-size: 20px;
+        text-transform: capitalize;
+        padding-right: 50px;
+        padding-left: 50px;
+    }
+    
+    .about .container .head .logo .info {
+        float: right;
+    }
+    /* EO About */
+    /* footer */
+    
+    .footer {
+        text-align: center;
+        background: #e8e8e8;
+        color: #252f31;
+        text-transform: capitalize;
+        padding: 10px;
+        overflow: hidden;
+    }
+    
+    .footer span {
+        text-transform: uppercase;
+        color: #252f31;
+        float: left;
+        margin-top: 10px;
+        padding-left: 50px;
+    }
+    
+    .footer .container .social ul {
+        list-style: none;
+        margin: 0;
+        padding-right: 50px;
+    }
+    
+    .footer .container .social ul li {
+        display: inline-block;
+        float: right;
+        margin: 2px;
+    }
+    
+    .footer .container .social ul li img {
+        width: 24px
+    }
+    /* EO Footer */
+    /* Page Men */
+    
+    .collection {
+        padding-top: 30px;
+    }
+    
+    .collection .container .pageheader h2 {
+        text-align: center;
+        text-transform: capitalize;
+        text-decoration: solid;
+        color: #252f31;
+    }
+    
+    .collection .container .bigphoto {
+        text-align: center;
+        padding-top: 20px;
+    }
+    
+    .collection .container .bigphoto>div {
+        float: left;
+        width: 33.3%;
+        margin-bottom: 40px;
+    }
+    
+    .storeheader h2 {
+        padding-top: 50px;
+        font-size: 200%;
+        text-align: center;
+        text-transform: capitalize;
+        color: #252f31;
+    }
+    
+    table,
+    th,
+    td {
+        border: 3px solid #252f31;
+        border-collapse: collapse;
+        color: #252f31;
+    }
+    
+    .table {
+        text-align: center;
+        padding: 50px;
+    }
+    
+    .table tr th {
+        height: 40px;
+        width: 500px;
+        font-size: 150%;
+    }
+    
+    .table tr td {
+        height: 30px;
+        font-size: 110%;
+    }
+    
+    .table tr td a {
+        text-decoration: none;
+    }
+    
+    .table tr td a:hover {
+        color: #252f31;
+    }
+
+/* Contact */
+
+.contactuspage{
+    overflow: hidden;
+    text-align: center
+}
+
+
+
+.contactuspage .header h2{
+    color: #000;
+    font-size: 200%;
+}
+.contactuspage .header h4{
+    color: #000;
+    display: inline-block;
+}
+
+.contactuspage .header p{
+   line-height: 1.5;
+    color: #252f31
+}
+
+
+
+.contactform{
+    overflow: hidden;
+    text-align: left;
+    padding-left: 200px
+}
+.contactform form{
+    padding-top: 30px;
+
+    height: 700px;
+}
+.contactform form  input[type=text], input[type=password], textarea, select{
+    width: 75%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: block;
+    border: none;
+    background: #f1f1f1;
+}
+
+.contactform form input[type=submit]{
+  background-color: #252f31;
+  color: white;
+  padding: 14px 20px;
+  border: none;
+  cursor: pointer;
+  width: 75%;
+  opacity: 0.9;
+
+}
+.contactform form input[type=submit]:hover{
+    opacity: 1
+}
+
+label{
+    font-weight: bold
+}
+
+/* EO Contact */
+
+
+
+
+/* Subscribe */
+
+/* Full-width input fields */
+ input[type=text], input[type=password], input[type=email] {
+      width: 100%;
+      padding: 15px;
+      margin: 5px 0 22px 0;
+      display: block;
+      border: none;
+      background: #f1f1f1;
+}
+input[type=password]{
+    display: inline-block
+}
+
+input[type=text]:focus, input[type=password]:focus, input[type=email]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+
+
+/* Set a style for all buttons */
+button{
+  background-color: #252f31;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+button:hover {
+  opacity:1;
+}
+
+/* Extra styles for the cancel button */
+.container_form .cancelbtn {
+  background-color: #252f31;
+}
+
+/* Float cancel and signup buttons and add an equal width */
+.cancelbtn, .signupbtn {
+  float: left;
+  width: 50%;
+}
+
+/* Add padding to container elements */
+.container_form {
+    padding:0 100px 70px 100px
+}
+.container_form h1,.container_form p{
+    text-align: center;
+}
+
+/* Clear floats */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Change styles for cancel button and signup button on extra small screens */
+@media screen and (max-width: 300px) {
+  .cancelbtn, .signupbtn {
+    width: 100%;
+  }
+}
+/* EO Subscribe */
