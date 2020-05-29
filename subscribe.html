@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="css/style.css" />
     <script src="js/jquery-3.5.0.min.js"></script>
     <script src="js/form.js"></script>
+    <meta name="viewport" content="width=device-widht, initial-scale=1.0">
+
 </head>
 
 <body>
@@ -32,43 +34,44 @@
     </div>
     <!-- EO Header -->
 
-<form action="action_page.php" onsubmit="return valid()">
-  <div class="container_form">
-    <h1>Sign Up</h1>
-    <p>Please fill in this form to create an account.</p>
-    <hr>
-    <label for="fname">First Name</label>
-    <input type="text" id="fname" name="firstname" placeholder="Your name.." required>
+    <form action="action_page.php" onsubmit="return form_valid()">
+        <div class="container_form">
+            <h2>Please fill in this form to create an account.</h2>
+            <hr>
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" name="firstname" placeholder="Your name.." required>
 
-    <label for="lname">Last Name</label>
-    <input type="text" id="lname" name="lastname" placeholder="Your last name.." required>
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" name="lastname" placeholder="Your last name.." required>
 
-    <label for="email">Email</label>
-    <input type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder="enter email address example@example.com" name="email" required>
+            <label for="email">Email</label>
+            <input type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder="enter email address example@example.com" name="email" required>
 
-    <label for="mobile">Mobile</label>
-    <input type="text" id="mobile" pattern="^\d{11}$" name="mobilenum" placeholder="Your mobile number of 11.." required>
-          
-    <label for="address">Address</label>
-    <input type="text" id="address" name="address" placeholder="Your address.." required>
-      
-    <label for="gender">Gender : </label>
-    <label><input type="radio" unchecked name="gender" value="male" style="margin-bottom:15px" required> Male</label>
-    <label><input type="radio" unchecked name="gender" value="female" style="margin-bottom:15px" required> Female</label><br>
-      
-    <label for="psw">Password</label><br>
-    <input class="pass1" type="password" placeholder="Enter the Password" pattern="(?=^.{8}$)((?=.*\d)(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" id="pass1" title="Must start with uppercase, only 8 characters, contains at least one digit,one lowercase letter and a special char." required>
-    <label for="psw">Repeat Password</label><br>
-    <input type="password"  id="pass2" placeholder="Repeat The Password" required>
+            <label for="mobile">Mobile</label>
+            <input type="text" id="mobile" pattern="^\d{11,}$" name="mobilenum" placeholder="Your mobile number of 11.." required>
 
-    <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+            <label for="address">Address</label>
+            <input type="text" id="address" name="address" placeholder="Your address.." required>
 
-    <div class="clearfix">
-      <button type="button" class="cancelbtn">Cancel</button>
-      <button type="submit" class="signupbtn">Signup</button>
-    </div>
-  </div>
-</form>
+            <label for="gender">Gender</label>
+            <select id="gender" name="gender">
+        <option  value="nothing" selected="">choose</option>
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+             </select>
+
+            <label for="psw">Password</label><br>
+            <input class="pass1" type="password" id="pass1" name="pass" placeholder="Enter the Password" pattern="(?=^.{8}$)((?=.*\d)(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$" id="pass1" title="Must start with uppercase, only 8 characters, contains at least one digit,one lowercase letter and a special char."
+                required>
+            <label for="psw">Repeat Password</label><br>
+            <input type="password" id="pass2" placeholder="Repeat The Password" required>
+
+            <div class="clearfix">
+                <button type="button" class="cancelbtn">Cancel</button>
+                <button type="submit" class="signupbtn">Signup</button>
+            </div>
+        </div>
+    </form>
 
     <!-- Footer -->
     <div class="footer">
@@ -91,31 +94,38 @@
             </div>
         </div>
     </div>
-        
+
     <!-- EO Footer -->
     <script type="text/javascript">
-                        function valid(){
-                            var password = document.getElementById("pass1").value;
-                            var confirmPassword = document.getElementById("pass2").value;
-                            var make_pass_string = password.toString;
-                            var pass_length = password.length;   
-                            var i=0;
-                            
-                            if (password != confirmPassword) {
-                                alert("Passwords do not match.");
-                                return false;
-                            }else{                             
-                                if(password[0] != password[0].toUpperCase()){
-                                    alert('Make sure it password starts with capital letter');
-                                    return false;
-                                }else{
-                                    alert('Thank you for subscribing');
-                                    return true;
-                                }
-                            }
+        function form_valid() {
+            var password = document.getElementById("pass1").value;
+            var confirmPassword = document.getElementById("pass2").value;
+            var gender = document.getElementById("gender").value;
+            var pass_length = password.length;
+            var i = 0;
+            if (password.search(" ") != -1) {
+                alert('Password should have no spaces');
+                return false;
+            } else {
+                if (password[0] != password[0].toUpperCase()) {
+                    alert('Password should start with capital letter');
+                    return false;
+                } else {
+                    if (password != confirmPassword) {
+                        alert("Passwords do not match.");
+                        return false;
+                    } else {
+                        if (gender == 'nothing') {
+                            alert('choose your gender pls');
+                            return false;
+                        } else {
+                            return true;
                         }
-                        }
-                    </script>
-    </body>
+                    }
+                }
+            }
+        }
+    </script>
+</body>
 
 </html>
