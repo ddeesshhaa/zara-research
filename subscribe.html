@@ -39,10 +39,10 @@
             <h2>Please fill in this form to create an account.</h2>
             <hr>
             <label for="fname">First Name</label>
-            <input type="text" id="fname" pattern="[A-Za-z]" name="firstname" placeholder="Your name.." required>
+            <input type="text" id="fname" pattern="^[A-Za-z]+$" name="firstname" placeholder="Your name.." required>
 
             <label for="lname">Last Name</label>
-            <input type="text" id="lname" name="lastname" pattern="[A-Za-z]" placeholder="Your last name.." required>
+            <input type="text" id="lname" name="lastname" pattern="^[A-Za-z]+$" placeholder="Your last name.." required>
 
             <label for="email">Email</label>
             <input type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" placeholder="enter email address " name="email" required>
