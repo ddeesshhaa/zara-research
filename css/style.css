@@ -491,11 +491,11 @@
     }
     /* EO Subscribe */
     
-    .welcome{
+    .welcome h2, .welcome p{
         text-align: center;
         color: #252f31;
     }
-    .welcome span{
+    .welcome p span{
         color: #000;
         font-weight: bold;
         display: block;
