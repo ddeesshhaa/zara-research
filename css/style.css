@@ -490,3 +490,18 @@
         }
     }
     /* EO Subscribe */
+    
+    .welcome{
+        text-align: center;
+        color: #252f31;
+    }
+    .welcome span{
+        color: #000;
+        font-weight: bold;
+        display: block;
+        margin-top: 10px;
+    }
+
+    .hot_news h2{
+        color: red;
+    }

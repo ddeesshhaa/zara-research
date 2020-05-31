@@ -34,7 +34,7 @@
     </div>
     <!-- EO Header -->
 
-    <form action="action_page.php" method="POST" onsubmit="return form_valid()">
+    <form action="action_page.php" method="post" target="_blank" onsubmit="return form_valid()">
         <div class="container_form">
             <h2>Please fill in this form to create an account.</h2>
             <hr>
@@ -68,7 +68,7 @@
 
             <div class="clearfix">
                 <button type="button" class="cancelbtn">Cancel</button>
-                <button type="submit" class="signupbtn">Signup</button>
+                <button  type="submit" class="signupbtn">Signup</button>
             </div>
         </div>
     </form>
@@ -102,7 +102,6 @@
             var confirmPassword = document.getElementById("pass2").value;
             var gender = document.getElementById("gender").value;
             var pass_length = password.length;
-            var i = 0;
             if (password.search(" ") != -1) {
                 alert('Password should have no spaces');
                 return false;
@@ -120,8 +119,9 @@
                             return false;
                         } else {
                             alert('thank you');
-                            window.location.href = 'index.html';
+                            window.location.href = 'welcome.html';
                             return true;
+                            
                         }
                     }
                 }

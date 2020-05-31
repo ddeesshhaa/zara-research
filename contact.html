@@ -45,7 +45,7 @@
         </div>
         <div class="contactform">
             <div class="container">
-                <form action="action_page.php">
+                <form action="action_page.php" method="POST" target="_blank" onsubmit="return thankyou()">
 
                     <label for="fname">First Name</label>
                     <input type="text" id="fname" name="firstname" placeholder="Enter your first name " required>
@@ -71,7 +71,7 @@
                     <label for="subject">Subject</label>
                     <textarea id="subject" name="subject" placeholder="Write something.." style="height:150px" required></textarea>
 
-                    <input type="submit" value="Send Your Request">
+                    <input type="submit"  value="Send Your Request">
 
                 </form>
             </div>
@@ -102,6 +102,12 @@
         </div>
     </div>
     <!-- EO Footer -->
+    <script>
+        function thankyou(){
+            alert('thank you');
+            window.location.href = 'contact.html';
+        }
+    </script>
 </body>
 
 </html>
